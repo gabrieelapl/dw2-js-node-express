@@ -1,0 +1,36 @@
+body {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botoes {
+  display: flex;
+  gap: 20px; /* Espaço entre os botões */
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.icone {
+  width: 40px;
+  height: 40px;
+}
