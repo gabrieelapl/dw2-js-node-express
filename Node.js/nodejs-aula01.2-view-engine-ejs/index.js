@@ -9,18 +9,16 @@ app.set("view engine", "ejs");
 
 //Criando a primeira rota do site (ROTA PRINCIPAL)
 //REQ -> trata a REQUISIÇÃO / RES -> trata a RESPOSTA
-app.get("/", (req, res) => {
+app.get("/index", (req, res) => {
   res.render("index");
 });
 
-//ROTA DE PRODUTOS
-app.get("/produtos", (req, res) => {
-  res.send("<h1>Bem vindo a página de produtos!</h1>");
+app.get("/clientes", (req, res) => {
+  res.render("clientes");
 });
 
-//ROTA DE CLIENTES
-app.get("/clientes", (req, res) => {
-  res.send("<h1>Bem vindo a página de clientes!</h1>");
+app.get("/produtos", (req, res) => {
+  res.render("produtos");
 });
 
 //Iniciando o servidor http
