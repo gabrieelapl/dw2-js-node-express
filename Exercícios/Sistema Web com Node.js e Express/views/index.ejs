@@ -1,59 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS-->
-    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
-
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-    <title>Catálogo de filmes, séries e animações</title>
-  </head>
-  <body>
-    <header>
-        <img src="/public/imgs/header.jpg" alt="">
-    </header>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <button
-      data-mdb-collapse-init
-      class="navbar-toggler"
-      type="button"
-      data-mdb-target="#navbarCenteredExample"
-      aria-controls="navbarCenteredExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div
-      class="collapse navbar-collapse justify-content-center"
-      id="navbarCenteredExample"
-    >
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/filmes">Filmes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/series">Séries</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/animacoes">Animações</a>
-        </li>
-      </ul>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<main class="cards-container">
+  <a href="/filmes" class="card">
+    <img src="/imgs/filmes.png" alt="Filmes">
+    <div class="card-content">
+      <h2>Filmes</h2>
+      <p>Explore grandes sucessos do cinema e lançamentos imperdíveis!</p>
     </div>
-  </div>
-</nav>
+  </a>
 
-</body>
+  <a href="/series" class="card">
+    <img src="/imgs/series.png" alt="Séries">
+    <div class="card-content">
+      <h2>Séries</h2>
+      <p>Descubra histórias cativantes e personagens marcantes.</p>
+    </div>
+  </a>
 
-</html>
+  <a href="/animacoes" class="card">
+    <img src="/imgs/animacoes.png" alt="Animações">
+    <div class="card-content">
+      <h2>Animações</h2>
+      <p>Entre em mundos mágicos e cheios de imaginação.</p>
+    </div>
+  </a>
+</main>
+<%- include ('partials/footer.ejs') %>
+
+
+
