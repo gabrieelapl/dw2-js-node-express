@@ -1,5 +1,5 @@
 {
-  "name": "sistema-web-com-node.js-e-express",
+  "name": "revisao-pratica-dw2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,11 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon index.js"
   },
-  "author": "Gabriela Lino",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "nodemon": "^3.1.11",
+    "sequelize": "^6.37.7"
   },
   "type": "module"
 }

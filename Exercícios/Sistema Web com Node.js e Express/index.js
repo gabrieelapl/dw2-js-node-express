@@ -4,20 +4,24 @@ const app = express();
 
 const port = 8080; 
 
-import AnimacoesController from "./controllers/AnimacoesController.js";
-import FilmesController from "./controllers/FilmesController.js";
-import SeriesController from "./controllers/SeriesController.js";
-
-app.use("/",AnimacoesController)
-app.use("/",FilmesController)
-app.use("/",SeriesController)
-
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+app.get("/filmes", (req, res) => {
+  res.render("filmes");
+});
+
+app.get("/series", (req, res) => {
+  res.render("series");
+});
+
+app.get("/animacoes", (req, res) => {
+  res.render("animacoes");
 });
 
 app.listen(port, (error) => {
