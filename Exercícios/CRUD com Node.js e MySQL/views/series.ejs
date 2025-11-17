@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séries</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Séries</h1>
+    <hr />
+    <div class="container">
+      <h1>Cadastrar nova série:</h1>
+      <form action="/series/new" method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome" />
+        <label>Gênero:</label>
+        <input type="text" name="genero" />
+        <label>Número de temporadas:</label>
+        <input type="number" name="temporadas" />
+
+        <input type="submit" value="Cadastrar" />
+      </form>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <table>
+      <thead>
+        <th style="width: 150px; text-align: left">Nome</th>
+        <th style="width: 150px; text-align: left">Gênero</th>
+        <th style="width: 150px; text-align: left">Número de temporadas</th>
+        <th style="width: 150px; text-align: left">Ações</th>
+      </thead>
+      <tbody>
+        <%series.forEach(serie => { %>
+        <tr>
+          <td><%= serie.nome %></td>
+          <td><%= serie.genero %></td>
+          <td><%= serie.temporadas %></td>
+
+        <td>
+            <a href="/series/edit/<%= serie.id %>">
+                <button class="btn btn-warning btn-sm">Editar</button>
+            </a>
+        </td>
+          <td>
+            <a href="/series/delete/<%=serie.id%>">
+              <button
+                onclick="return confirm('Deseja mesmo excluir a série <%= serie.nome %>?')"
+              >
+                Excluir
+              </button>                                                                                                                         
+            </a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <footer style="text-align: center">
+      <hr />
+      The Movies &copy; 2025
+    </footer>
+  </body>
+</html>
