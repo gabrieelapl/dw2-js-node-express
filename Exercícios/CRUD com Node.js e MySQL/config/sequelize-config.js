@@ -1,12 +1,15 @@
-import Sequelize from "sequelize";
+// Importando o Sequelize
+import Sequelize from "sequelize"
 
+// Criando os dados de conexão com o banco de dados
 const connection = new Sequelize({
-    dialect: "mysql",
-    host: "localhost",
-    username: "root",
-    password: "",
-    database: "series",
-    timezone: "-03:00",
+    dialect: 'mysql',
+    host: 'localhost',
+    username: 'root',
+    password: '',
+    // Comente essa linha na primeira execução da aplicação
+    database: 'series', 
+    timezone: "-03:00"
 })
 
-export default connection;
+export default connection
